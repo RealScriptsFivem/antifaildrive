@@ -19,8 +19,8 @@ mdc.notify = function(xType, message, duration)
     -- edit all notifications messages in client.lua
 end
 
-mdc.explosionChance = 100 -- 10%
-mdc.completeExplosionChance = 100 -- chance for the vehicle to explode completly after engine got destroyed
+mdc.explosionChance = 10 -- 10%
+mdc.completeExplosionChance = 60 -- chance for the vehicle to explode completly after engine got destroyed
 
 mdc.wheels = function()
     return math.random(1, 4) --how many weels to be broken
