@@ -1,7 +1,6 @@
 
 # AntiFailDrive (Version 1.0)
 JOIN DISCORD FOR MORE HIGH QUALITY FREE SCRIPTS
-YOU CAN FREELY USE THIS IN YOUR SERVER OR A SCRIPT PACK, HOWEVER IF THE SCRIPT PACK IS PAID, YOU HAVE TO LEAVE THIS NAME AND MENTION ME AS THE AUTHOR (fx_manifest)
 This FiveM script provides immersive vehicle dynamics and failure handling mechanics. Below, you will find descriptions of the features and configuration options.
 
 ---
