@@ -1,6 +1,6 @@
 local airTime = 0.0
-local availableWheels = {0, 1, 2, 3}
-local defaultWheels = {0, 1, 2, 3}
+local avbWheels = {0, 1, 2, 3}
+local Wheels = {0, 1, 2, 3}
 
 CreateThread(function()
     while true do
@@ -31,11 +31,9 @@ CreateThread(function()
             if IsEntityInAir(vehicle) then
                 airTime = airTime + 0.1
             elseif airTime > 1.0 then
-                local wheelsToBreak = Cfg.wheels()
-
-                for i = 1, math.min(wheelsToBreak, #availableWheels) do
-                    local index = math.random(1, #availableWheels)
-                    local wheelIndex = availableWheels[index]
+                for i = 1, math.min(Cfg.wheels(), #avbWheels) do
+                    local index = math.random(1, #avbWheels)
+                    local wheelIndex = avbWheels[index]
                 
                     BreakOffVehicleWheel(
                         vehicle,
@@ -46,14 +44,14 @@ CreateThread(function()
                         false   
                     )
                 
-                    table.remove(availableWheels, index)
+                    table.remove(avbWheels, index)
                 end
                 
-                availableWheels = {table.unpack(defaultWheels)}
+                avbWheels = {table.unpack(Wheels)}
 
                 airTime = 0.0
 
-                Cfg.notify('error', 'Wheels got broken!', 5000)
+                Cfg.notify('error', Cfg.strings.wheels, 5000)
 
                 if Cfg.enableExplosion and not Cfg.explosionExcluded[vehicleName] then
                     if math.random(1, 100) <= Cfg.explosionChance then
@@ -63,7 +61,7 @@ CreateThread(function()
                         AddExplosion(engineCoords, 2, 400.0, true, false, false, 4.0)
 
                         StartEntityFire(vehicle)
-                        Cfg.notify('error', 'Engine exploded!', 3000)
+                        Cfg.notify('error', Cfg.strings.engine, 3000)
 
                         if math.random(1, 100) <= Cfg.completeExplosionChance then
                             Wait(math.random(4000, 11000))
@@ -75,11 +73,7 @@ CreateThread(function()
                                 SetVehicleDoorBroken(vehicle, i, true)
                             end
 
-                            for i = 0, 3 do
-                                SetVehicleTyreBurst(vehicle, i, true, 1000)
-                            end
-
-                            Cfg.notify('error', 'Vehicle exploded and got destroyed!', 5000)
+                            Cfg.notify('error', Cfg.strings.explosion, 5000)
                         end
                     end
                 end
@@ -88,7 +82,7 @@ CreateThread(function()
             end
         else
             airTime = 0.0
-            availableWheels = {table.unpack(defaultWheels)}
+            avbWheels = {table.unpack(Wheels)}
         end
 
         ::continue::
