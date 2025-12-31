@@ -49,4 +49,4 @@ mdc.excluded = {
 ## License
 This script is open-source and free to use. See `LICENSE.md` for more details.
 
-For further questions or support, join our [Discord](https://discord.gg/2Ud9Dbfu4e) or visit the [GitHub Repository](https://github.com/RealScriptsFivem/antifaildrive).
+For further questions or support, join our [Discord](https://discord.com/invite/NGZuuaFmWY) or visit the [GitHub Repository](https://github.com/RealScriptsFivem/antifaildrive).
