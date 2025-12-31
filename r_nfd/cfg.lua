@@ -16,12 +16,17 @@ Cfg = {}
 --  https://discord.com/invite/NGZuuaFmWY
 -- If the discord link doesn't know let us know on: https://madechester.pl
 
-Cfg.notify = function(xType, message, duration)
-    -- Example usage of ox_lib's notification system, you can use your own notify here
+Cfg.notify = function(xType, message, duration) -- use your notification system here
     lib.notify({type = xType, description = message, duration = duration or 5000})
 
-    -- edit all notifications messages in client.lua
+    --ESX.ShowNotification(message) -- uncomment this if using ESX notifs
 end
+
+Cfg.strings = {
+    wheels = 'Wheels broke off!',
+    engine = 'Engine exploded!',
+    explosion = 'Vehicle exploded and got destroyed!',
+}
 
 -- Explosion system, added to create more immersion and 
 Cfg.enableExplosion = true -- enables the explosion system after wheels break
@@ -43,4 +48,3 @@ Cfg.excluded = { -- Here you can add excluded vehicles on which the system won't
     ["rebel"] = true,
     ["zentorno"] = true,
 }
-
