@@ -14,7 +14,7 @@ CreateThread(function()
             local vehicleName = GetDisplayNameFromVehicleModel(GetEntityModel(vehicle)):lower()
 
             if Cfg.excluded[vehicleName]
-                or vehicleClass == 8  -- moto
+                or vehicleClass == 8
                 or vehicleClass == 9
                 or vehicleClass == 13
                 or vehicleClass == 14
@@ -88,3 +88,4 @@ CreateThread(function()
         ::continue::
     end
 end)
+
