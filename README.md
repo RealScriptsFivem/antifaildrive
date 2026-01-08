@@ -1,8 +1,6 @@
 
-# AntiFailDrive (Version 1.0)
-NOTE: THIS VERSION IS BETA, DOWNLOAD FROM RELEASES ONLY!
+# AntiFailDrive (Version 2.0)
 JOIN DISCORD FOR MORE HIGH QUALITY FREE SCRIPTS
-This FiveM script provides immersive vehicle dynamics and failure handling mechanics. Below, you will find descriptions of the features and configuration options.
 
 ---
 
